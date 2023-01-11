@@ -1,0 +1,15 @@
+.typesform
+    .outer 
+        .inner 
+            .typesform__container 
+                .typesform__title
+                    h3 Получите <span>бесплатную консультацию</span> по решению Вашей финансовой задачи
+                    p Оставьте заявку или напишите нам в мессенджеры, и мы предложим индивидуальные  условия кредитования
+                img(src="./images/phone.png" alt="Телефон")
+                form(action="").form
+                    +input('Номер телефона','tel', 'phone')
+                    p пожалуйста, укажите корректно 
+                    input(type="submit" value="Получить консультацию").btn.btn_green
+                    p Отправляя запрос вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                    div или напишите в мессенджер
+                    include ../social/social

@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    svg {
+        width: 104px;
+        height: 46px;
+    }
+    p {
+        font-weight: 500;
+        font-size: .87rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+    }
+}

@@ -1,0 +1,120 @@
+.types {
+    background: #F6F7F9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (min-width: 992px) {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding-top: 30px;
+        
+        @media (min-width: 576px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: 1200px) {
+            row-gap: 40px;
+            column-gap: 40px;
+        }
+        li {
+            position: relative;
+            label {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                input {
+                    display: none;
+                    &:checked + div::before {
+                        content: '';
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        width: 30px;
+                        height: 30px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.33 18.29L9.95875 14.9187C9.67458 14.6346 9.31963 14.4992 8.8939 14.5126C8.46713 14.525 8.11167 14.6733 7.8275 14.9575C7.54333 15.2417 7.40125 15.6033 7.40125 16.0425C7.40125 16.4817 7.54333 16.8433 7.8275 17.1275L12.245 21.545C12.5292 21.8292 12.8908 21.9712 13.33 21.9712C13.7692 21.9712 14.1308 21.8292 14.415 21.545L23.2113 12.7487C23.4954 12.4646 23.6313 12.1091 23.6189 11.6823C23.6055 11.2566 23.4567 10.9017 23.1725 10.6175C22.8883 10.3333 22.5267 10.1912 22.0875 10.1912C21.6483 10.1912 21.2867 10.3333 21.0025 10.6175L13.33 18.29ZM15.5 31C13.3558 31 11.3408 30.5929 9.455 29.7786C7.56917 28.9654 5.92875 27.8612 4.53375 26.4662C3.13875 25.0713 2.03463 23.4308 1.2214 21.545C0.407133 19.6592 0 17.6442 0 15.5C0 13.3558 0.407133 11.3408 1.2214 9.455C2.03463 7.56917 3.13875 5.92875 4.53375 4.53375C5.92875 3.13875 7.56917 2.03412 9.455 1.21985C11.3408 0.406617 13.3558 0 15.5 0C17.6442 0 19.6592 0.406617 21.545 1.21985C23.4308 2.03412 25.0713 3.13875 26.4662 4.53375C27.8612 5.92875 28.9654 7.56917 29.7786 9.455C30.5929 11.3408 31 13.3558 31 15.5C31 17.6442 30.5929 19.6592 29.7786 21.545C28.9654 23.4308 27.8612 25.0713 26.4662 26.4662C25.0713 27.8612 23.4308 28.9654 21.545 29.7786C19.6592 30.5929 17.6442 31 15.5 31ZM15.5 27.9C18.9358 27.9 21.8617 26.6925 24.2776 24.2776C26.6925 21.8617 27.9 18.9358 27.9 15.5C27.9 12.0642 26.6925 9.13828 24.2776 6.72235C21.8617 4.30745 18.9358 3.1 15.5 3.1C12.0642 3.1 9.1388 4.30745 6.7239 6.72235C4.30797 9.13828 3.1 12.0642 3.1 15.5C3.1 18.9358 4.30797 21.8617 6.7239 24.2776C9.1388 26.6925 12.0642 27.9 15.5 27.9Z' fill='%2314AC63'/%3E%3C/svg%3E%0A");
+                        z-index: 1;
+                        background-size: contain;
+                        @media (min-width: 992px) {
+                            right: 42px;
+                            top: 42px;
+                        }
+                    }
+                }
+                div {
+                    p {
+                        font-weight: 500;
+                        font-size: 1.25rem;
+                        line-height: 130%;
+                        color: #000000;
+                        width: 50%;
+                        z-index: 1;
+                    }
+                    display: flex;
+                    justify-content: space-between;
+                    column-gap: 15px;
+                    background: #E6ECF2;
+                    border-radius: 6px;
+                    padding: 20px 0;
+                    min-height: 120px;
+                    padding-left: 10%;
+                    padding-right: 0;
+                    position: relative;
+                    transition: .4s ease-out;
+                    overflow: hidden;
+                    @media (min-width: 992px) {
+                        padding: 55px 0;
+                        padding-left: 10%;
+                        min-height: 205px;
+                    }
+    
+                    &:hover {
+                        p {
+                            color: $hover;
+                        }
+                        img, svg {
+                            transform: translateX(10px);
+                        }
+                    }
+                    img {
+                        transition: .4s ease-out;
+                        position: absolute;
+                        width: 37%;
+                        height: 100%;
+                        object-fit: contain;
+                        object-position: right bottom;
+                        right: 0;
+                        bottom: 0;
+                    }       
+                }   
+            }
+            &:first-of-type {
+                img {
+                    width: 50%;
+                }                
+            }
+            &:last-child {
+                label {
+                    div {
+                        background: white;
+                        svg {
+                            margin-right: 56px;
+                            min-height: 18px;
+                            object-fit: contain;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            transition: .4s ease-out;
+                        }
+                    }                            
+                }
+            }  
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.btn {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 90%;
+    padding: 10px;
+    max-width: 172px;
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: white;
+    color: $first;
+    outline: none;
+    transition: .4s ease-out;
+    @media (min-width: 768px) {
+        font-size: 14px;
+    }
+    &.btn_green {
+        background: $green;
+        color: white;
+        border-color: $green;
+        &:hover {
+            background: $hover;
+            color: white;
+        }
+    }
+    &:hover {
+        color: $hover;
+        border-color: $hover;
+    }
+}

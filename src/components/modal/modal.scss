@@ -1,0 +1,214 @@
+.modal {
+    overflow-y: auto;
+    height: 0;
+    opacity: 0;
+    z-index: -2;
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 12, 38, 0.2);
+    transition: .4s, height 0s 0.5s;
+    padding: 20px;
+}
+
+.modal_opened {
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 130;
+}
+.modal__container {
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin: auto;
+    max-width: 1080px;
+    width: 100%;
+    padding: 40px 20px;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        padding: 60px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #F8FAFB;
+    }
+    &::before {
+        display: none;
+        @media (min-width: 425px) {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 300px;
+            z-index: 1;
+            height: 100%;
+            background: url(../images/phone.png) no-repeat;
+            background-size: contain;
+            background-position: bottom;    
+        }        
+        @media (min-width: 425px) {
+            right: -70px;
+            left: unset;
+        }
+        @media (min-width: 768px) {
+            width: 500px;
+            right: -120px;
+        }
+        @media (min-width: 992px) {
+            width: 590px;
+        }
+    }
+}
+.modal__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1200px) {
+        max-width: 600px;    
+    }
+}
+.modal__content-container {
+    z-index: 1;
+    width: 100%;
+    @media (min-width: 768px) {
+        max-width: 360px;
+    }
+    @media (min-width: 1200px) {
+        margin-left: auto;
+        max-width: 518px;
+    }
+}
+.modal__close-button {
+    z-index: 5;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: .7s;
+    @media (min-width: 768px) {
+        top: 37px;
+        right: 58px;
+    }
+    &:hover {
+        &::after, &::before {
+            background: $hover;
+        }
+        
+    }
+    &::after {
+        content: '';
+        background: #000000;
+        top: 50%;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        transition: all .3s ease 0s;
+        position: absolute;
+        transform: rotate(45deg) translateY(-50%);
+    }
+    &::before {
+        content: '';
+        background: #000000;
+        top: 50%;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        transition: all .3s ease 0s;
+        position: absolute;
+        transform: rotate(-45deg) translateY(-50%);
+    }
+}
+
+.modal__title{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    color: #000000;
+    font-family: "Source Sans Pro", sans-serif;
+    strong {
+        color: $green;
+        font-weight: 600;
+    }
+}
+.modal__desc {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 25px;
+    color: #5C6064;
+}
+
+.modal__content {
+    form {
+        margin-top: 40px;
+        position: relative;
+        width: 100%;
+        
+        @media (min-width: 425px) {
+            max-width: 55%;
+        }
+        @media (min-width: 768px) {
+            max-width: unset;
+        }
+        & > p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+        }
+        .form__checkbox {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        & > div:not(.form__placeholder-container) {
+            padding-top: 10px;
+            text-align: center;
+            @media (min-width: 768px) {
+                padding-top: 28px;    
+            }
+            .social {
+                margin: 0 auto;
+                margin-top: 10px;
+                & > a svg {
+                    width: 24px;
+                }
+            }
+        }
+    }
+    .btn {
+        margin-top: 20px;
+        max-width: 100%;
+        padding: 20px;
+        & + p {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 140%;
+            color: #B5B9BD;
+            text-align: center;
+            a {
+                text-decoration: underline;
+                color: #B5B9BD;
+            }
+        }
+    }
+}

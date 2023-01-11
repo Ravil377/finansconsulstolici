@@ -1,0 +1,93 @@
+.accordion {
+    background: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    // transition: 0.4s;
+    border-bottom: 1px solid #E8E8E8;
+    display: flex;
+    align-items: center;
+    @media(min-width: 768px) {
+        font-size: 24px;
+        padding-bottom: 22px;
+        padding-top: 22px;
+    }
+    div {
+        min-width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        border: 1px solid #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 9px;
+        transition: .4s;
+        @media(min-width: 768px) {
+            min-width: 33px;
+            height: 33px;
+            margin-right: 17px;
+        }
+        &::after {
+            content: '+';
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        &::before {
+            content: '-';
+            display: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    }
+}
+
+.accordion._active, .accordion:hover {
+    font-weight: 600;
+    div {
+        background: $blue;
+        color: white;
+        border: 1px solid $blue;
+    }
+}
+.accordion.active {
+    border-bottom: unset;
+
+    div {
+        &::after {
+            display: none;
+        }
+        &::before {
+            display: flex;
+            align-items: center;
+            // padding-bottom: 4px;
+        }
+    }
+}
+
+.panel {
+    padding-left: 43px;
+    // padding-right: 13px;
+    background-color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid #E8E8E8;
+    @media(min-width: 768px) {
+        font-size: 18px;
+        padding-right: 13px;
+        padding-left: 57px;
+    }
+}

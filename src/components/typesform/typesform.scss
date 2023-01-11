@@ -1,0 +1,106 @@
+.typesform {
+    padding-top: 60px;
+}
+.typesform__container {
+    display: grid;
+    grid-template-columns:  1fr;
+    column-gap: 10px;
+    grid-template-areas: 'title' 'form';
+    @media (min-width: 576px) {
+        grid-template-columns: 1fr 40%;
+        grid-template-areas: 'title img' 'form img';
+    }
+    @media (min-width: 1400px) {
+        grid-template-columns: 1fr 445px minmax(300px, 420px);
+        grid-template-areas: 'title img form';
+    }
+    & > img {
+        display: none;
+        @media (min-width: 576px) {
+            display: block;
+            object-fit: contain;
+            object-position: bottom;
+            height: 100%;
+            width: 100%;
+            grid-area: img;
+        }
+    }
+}
+form.form {
+    grid-area: form;
+    padding-top: 23px;
+    padding-bottom: 60px;
+    input[type="submit"] {
+        margin-top: 14px;
+        max-width: 100%;
+        padding: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 90%;
+    }
+    p:last-of-type {
+        font-weight: 400;
+        text-align: center;
+        font-size: .68rem;
+        line-height: 140%;
+        color:#B5B9BD;
+        margin-top: 10px;
+        a {
+            text-decoration: underline;
+            color:#B5B9BD;
+            transition: .4s ease-out;
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+    & > div {
+        text-align: center;
+        font-weight: 400;
+        font-size: .81rem;
+        line-height: 140%;
+        margin-top: 28px;
+        
+        & + .social {
+            margin: 0 auto;
+            margin-top: 10px;
+            a {
+                svg {
+                    width: 24px;
+                }
+                
+            }
+        }
+    }
+}
+.form__placeholder-container + p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: $second;
+}
+.typesform__title {
+    grid-area: title;
+    @media (min-width: 1400px) {
+        max-width: 620px;
+        padding-bottom: 30px;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 120%;
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: 0;
+        color: #000000;
+        span {
+            color: $green;
+        }
+    }
+    p {
+        margin-top: 2.5rem;
+        font-weight: 400;
+        font-size: 1.12rem;
+        line-height: 140%;
+        color: $second;
+    }
+}

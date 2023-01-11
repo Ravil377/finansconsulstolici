@@ -1,0 +1,81 @@
+@use "sass:math";
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.icon-bg {
+    width: math.div(811, 438) * 1em;
+}
+.icon-bg1 {
+    width: math.div(779, 386) * 1em;
+}
+.icon-chat {
+    width: math.div(36, 34) * 1em;
+}
+.icon-check {
+    width: math.div(31, 31) * 1em;
+}
+.icon-check1 {
+    width: math.div(18, 15) * 1em;
+}
+.icon-dop {
+    width: math.div(72, 18) * 1em;
+}
+.icon-location {
+    width: math.div(67, 75) * 1em;
+}
+.icon-logo {
+    width: math.div(104, 47) * 1em;
+}
+.icon-logo-white {
+    width: math.div(104, 47) * 1em;
+}
+.icon-message1 {
+    width: math.div(258, 78) * 1em;
+}
+.icon-message2 {
+    width: math.div(390, 60) * 1em;
+}
+.icon-money {
+    width: math.div(44, 35) * 1em;
+}
+.icon-procent {
+    width: math.div(33, 34) * 1em;
+}
+.icon-russia {
+    width: math.div(20, 20) * 1em;
+}
+.icon-search {
+    width: math.div(20, 20) * 1em;
+}
+.icon-search1 {
+    width: math.div(93, 96) * 1em;
+}
+.icon-shield {
+    width: math.div(53, 64) * 1em;
+}
+.icon-shield-icon {
+    width: math.div(32, 37) * 1em;
+}
+.icon-telegram {
+    width: math.div(20, 20) * 1em;
+}
+.icon-telegram-white {
+    width: math.div(23, 24) * 1em;
+}
+.icon-viber {
+    width: math.div(20, 22) * 1em;
+}
+.icon-viber-white {
+    width: math.div(24, 26) * 1em;
+}
+.icon-whatsapp {
+    width: math.div(20, 20) * 1em;
+}
+.icon-whatsapp-white {
+    width: math.div(24, 24) * 1em;
+}

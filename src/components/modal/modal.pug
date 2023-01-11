@@ -1,0 +1,18 @@
+.modal.modal-js
+    .modal__container.modal__container-js
+        .modal__close-button.modal__close-js
+        .modal__content
+            .modal__content-container
+                .modal__title Получите <strong>бесплатную консультацию</strong> по решению Вашей финансовой задачи
+                .modal__desc Оставьте заявку или напишите нам в мессенджеры, и мы предложим индивидуальные  условия кредитования
+                form(action="").modal__form-js
+                    +input('Номер телефона','text','phone').phone-mask--js
+                    p пожалуйста, укажите корректно 
+                    input(type="submit" value="Получить консультацию").btn.btn_green
+                    p Отправляя запрос вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                    div 
+                        p или напишите нам в наш мессенджер
+                        include ../social/social
+
+
+                

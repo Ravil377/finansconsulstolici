@@ -1,0 +1,25 @@
+.breadcrumbs {
+    ul {
+        display: flex;
+        li {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 120%;
+            color: $grey;
+            a {
+                color: inherit;
+                transition: .4s;
+                &:hover {
+                    color: $blue;
+                }
+            }
+            .breadcrumbs__divider {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 120%;
+                color: #0042A4;
+                padding: 0 5px;
+            }
+        }
+    }
+}

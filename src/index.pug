@@ -1,0 +1,32 @@
+extends base/pug/base
+//- include ./components/slider/slider
+//- include ./components/links/links
+
+append variables
+    - var title = 'Главная страница сайта'
+    - var pageClass = 'homepage'
+    - var menuHref = '/'
+
+block welcome
+    include ./components/welcome/welcome
+block underwelcome
+    include ./components/underwelcome/underwelcome
+block types
+    include ./components/types/types
+    include ./components/typesform/typesform
+
+block help 
+    include ./components/help/help
+
+block experience
+    include ./components/experience/experience
+
+block partners
+    include ./components/partners/partners
+    include ./components/check/check
+
+block freeconsultation
+    include ./components/freeconsultation/freeconsultation
+
+block map
+    include ./components/map/map

@@ -1,0 +1,20 @@
+.social {
+    display: flex;
+    max-width: 104px;
+    justify-content: space-between;
+    column-gap: 20px;
+    height: fit-content;
+    a {
+        svg {
+            width: 20px;
+            height: 24px;
+            fill: black;
+            transition: .4s ease-out;
+        }
+        &:hover {
+            svg {
+                fill: $hover;
+            }   
+        }
+    }
+}
